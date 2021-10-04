@@ -18,7 +18,7 @@ public class ArrayQueue {
         return front == rear;
     }
 
-    public void add(int item) {
+    public void enqueue(int item) {
         if (count == queue.length)
             throw new IllegalStateException();
         queue[rear] = item;
@@ -26,7 +26,7 @@ public class ArrayQueue {
         count++;
     }
     
-    public int remove() {
+    public int dequeue() {
         int item = queue[front];
         queue[front] = 0;
         front = (front+1)% queue.length;

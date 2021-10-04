@@ -2,8 +2,8 @@ package com.company;
 
 import java.util.LinkedList;
 
-public class HashMap {
-    private static class Entry {
+public class HashMap<S> {
+    private class Entry {
         private int key;
         private String value;
 
@@ -13,7 +13,7 @@ public class HashMap {
         }
     }
 
-    private LinkedList<Entry>[] entries = new LinkedList[5];
+    private final LinkedList<Entry>[] entries = new LinkedList[5];
 
     public void put(int key, String value) {
         int index = hash(key);

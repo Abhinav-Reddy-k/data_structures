@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Array {
     private int[] items;
     private int count;
@@ -9,9 +11,7 @@ public class Array {
     }
 
     public void print() {
-        for (int i = 0; i < count ; i++) {
-            System.out.println(items[i]);
-        }
+        Arrays.stream(items, 0, count).forEach(System.out::println);
     }
 
     public void insert(int num) {

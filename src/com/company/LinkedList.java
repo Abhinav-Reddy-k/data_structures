@@ -5,7 +5,6 @@ public class LinkedList {
         public Node(int value) {
             this.value = value;
         }
-
         private final int value;
         private Node next;
     }
@@ -25,7 +24,6 @@ public class LinkedList {
             tail.next = node;
             tail = node;
         }
-
     }
 
     public void addFirst(int item) {

@@ -34,13 +34,17 @@ public class AVLTree {
             root.rightChild = insert(root.rightChild,value);
         }
         root.height = 1 + Math.max(height(root.leftChild),height(root.rightChild));
+        balance(root);
+        return root;
+    }
+
+    private void balance(AVLnode root) {
         if(isLeftHeavy(root)){
 //            System.out.println(root.value + "is left heavy");
         }
         else if(isRightHeavy(root)){
 //            System.out.println(root.value + "is right heavy");
         }
-        return root;
     }
 
     public int height(AVLnode node){
